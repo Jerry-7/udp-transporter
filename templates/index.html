@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UDP 文件传输 - 多客户端同步</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <h1>UDP 文件传输 - 多客户端同步</h1>
+
+    <section>
+        <h2>连接管理</h2>
+        <input id="inputAddress" type="text" placeholder="输入客户端IP:端口，例如 192.168.0.101:9595" />
+        <button id="btnConnect">连接</button>
+        <div>
+            <strong>已连接客户端列表：</strong>
+            <ul id="clientsList"></ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>发送文件</h2>
+        <form id="sendFileForm">
+            <select id="targetSelect"></select>
+            <input type="file" id="fileInput" />
+            <button type="submit">发送</button>
+        </form>
+        <div id="sendProgress"></div>
+    </section>
+
+    <section>
+        <h2>接收文件请求</h2>
+        <div id="incomingFileOffer" style="display:none;">
+            <p>文件 <strong id="offerFilename"></strong>，总块数：<span id="offerTotalChunks"></span>，MD5：<span id="offerHash"></span></p>
+            <button id="acceptFileBtn">接受</button>
+            <button id="rejectFileBtn">拒绝</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>接收进度</h2>
+        <div id="recvProgress"></div>
+    </section>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

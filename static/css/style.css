@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+section {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+input[type="text"],
+input[type="file"],
+button {
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#clientsList {
+    list-style: none;
+    padding-left: 0;
+}
+
+#clientsList li {
+    padding: 4px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+#incomingFileOffer {
+    background: #fef6e0;
+    border: 1px solid #f4d03f;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#sendProgress,
+#recvProgress {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #2c3e50;
+    font-weight: bold;
+}
